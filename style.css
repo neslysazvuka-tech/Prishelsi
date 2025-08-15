@@ -1,0 +1,179 @@
+/* Основные стили */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0a0a1a;
+    color: #e0e0e0;
+    font-family: 'Orbitron', sans-serif;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.game-container {
+    width: 90%;
+    max-width: 800px;
+    height: 90vh;
+    background-color: #12122a;
+    border: 2px solid #4a4a8a;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(100, 100, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.game-header {
+    background: linear-gradient(to right, #1a1a3a, #2a2a5a, #1a1a3a);
+    padding: 10px 20px;
+    text-align: center;
+    border-bottom: 1px solid #4a4a8a;
+}
+
+.game-header h1 {
+    margin: 0;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 1.5rem;
+    color: #4af;
+    text-shadow: 0 0 10px rgba(100, 100, 255, 0.7);
+    letter-spacing: 2px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #afa;
+}
+
+.game-screen {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    overflow-y: auto;
+}
+
+.scene {
+    flex: 1;
+    margin-bottom: 20px;
+}
+
+.scene-image {
+    width: 100%;
+    height: 200px;
+    background-size: cover;
+    background-position: center;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #4a4a8a;
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.2);
+}
+
+.scene-text {
+    line-height: 1.6;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+.choices {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.choice-btn {
+    background: linear-gradient(to right, #2a2a5a, #3a3a7a);
+    color: #e0e0e0;
+    border: none;
+    padding: 12px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 0.9rem;
+    transition: all 0.3s;
+    text-align: left;
+    border-left: 3px solid #4af;
+}
+
+.choice-btn:hover {
+    background: linear-gradient(to right, #3a3a7a, #4a4a9a);
+    transform: translateX(5px);
+    box-shadow: 0 0 10px rgba(100, 100, 255, 0.5);
+}
+
+.game-footer {
+    background: linear-gradient(to right, #1a1a3a, #2a2a5a, #1a1a3a);
+    padding: 10px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 1px solid #4a4a8a;
+}
+
+.inventory {
+    font-size: 0.9rem;
+    color: #ffa;
+}
+
+#restart-btn {
+    background: linear-gradient(to right, #5a1a1a, #7a2a2a);
+    color: #e0e0e0;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    transition: all 0.3s;
+}
+
+#restart-btn:hover {
+    background: linear-gradient(to right, #7a2a2a, #9a3a3a);
+    box-shadow: 0 0 10px rgba(255, 100, 100, 0.5);
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* Анимации */
+@keyframes flicker {
+    0% { opacity: 0.7; }
+    50% { opacity: 1; }
+    100% { opacity: 0.7; }
+}
+
+.alien-text {
+    color: #af4;
+    animation: flicker 2s infinite;
+}
+
+.warning-text {
+    color: #f44;
+    font-weight: bold;
+}
+
+.important-item {
+    color: #4af;
+    font-weight: bold;
+}
+
+/* Адаптивность */
+@media (max-width: 600px) {
+    .game-container {
+        width: 100%;
+        height: 100vh;
+        border-radius: 0;
+    }
+    
+    .game-header h1 {
+        font-size: 1.2rem;
+    }
+    
+    .scene-image {
+        height: 150px;
+    }
+}
