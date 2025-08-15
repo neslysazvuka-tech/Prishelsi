@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Космическое вторжение</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="game-container">
+        <header class="game-header">
+            <h1>КОСМИЧЕСКОЕ ВТОРЖЕНИЕ</h1>
+            <div class="stats">
+                <span id="health">Здоровье: 100%</span>
+                <span id="time">Время: 00:00</span>
+            </div>
+        </header>
+        
+        <div class="game-screen">
+            <div id="scene" class="scene">
+                <div id="scene-image" class="scene-image"></div>
+                <div id="scene-text" class="scene-text">
+                    <p>Загрузка игры...</p>
+                </div>
+            </div>
+            
+            <div id="choices" class="choices">
+                <!-- Варианты выбора будут добавляться здесь -->
+            </div>
+        </div>
+        
+        <footer class="game-footer">
+            <div id="inventory" class="inventory">
+                <span>Инвентарь: ничего</span>
+            </div>
+            <button id="restart-btn" class="hidden">Начать заново</button>
+        </footer>
+    </div>
+    
+    <audio id="background-music" loop>
+        <source src="https://assets.mixkit.co/music/preview/mixkit-game-show-suspense-waiting-668.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="effect-sound">
+        <source src="" type="audio/mpeg">
+    </audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
